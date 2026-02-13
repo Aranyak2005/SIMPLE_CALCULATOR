@@ -1,0 +1,126 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    /* Gradient background */
+    background: linear-gradient(135deg, #6a11cb, #2d4162);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #e0e0e0;
+}
+
+/* Calculator Section */
+.calculator-section {
+    display: flex;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.calculator-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    width: 320px;
+}
+
+/* Display */
+.display {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 1rem;
+    border-radius: 12px;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 1rem;
+    min-height: 50px;
+    color: #fff;
+}
+
+/* Buttons */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.5rem;
+}
+
+.btn {
+    padding: 0.9rem;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.2s ease;
+    font-weight: bold;
+}
+
+/* Colorful buttons */
+.btn:nth-child(1),
+.btn:nth-child(2),
+.btn:nth-child(3),
+.btn:nth-child(4) {
+    background-color: #ff4b5c;
+    color: #fff;
+}
+
+.btn:nth-child(8),
+.btn:nth-child(12),
+.btn:nth-child(16) {
+    background-color: #f9a825;
+    color: #fff;
+}
+
+.btn:not(:nth-child(1)):not(:nth-child(2)):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(8)):not(:nth-child(12)):not(:nth-child(16)) {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.85;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+    .calculator-card {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+}
